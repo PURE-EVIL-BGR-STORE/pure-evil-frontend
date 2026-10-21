@@ -1,0 +1,20 @@
+{
+  "Nav": {
+    "catalog": "Sản Phẩm",
+    "about": "Về Chúng Tôi",
+    "faq": "FAQ",
+    "contact": "Liên Hệ",
+    "cart": "Giỏ Hàng",
+    "search": "Tìm Kiếm",
+    "login": "Đăng Nhập",
+    "register": "Đăng Ký"
+  },
+  "Footer": {
+    "tagline": "Not everyone is meant to fit in. Some are born to stand apart.",
+    "company": "Công Ty",
+    "connect": "Kết Nối",
+    "rights": "Bảo lưu mọi quyền.",
+    "privacy": "Chính Sách Bảo Mật",
+    "terms": "Điều Khoản Dịch Vụ"
+  }
+}
