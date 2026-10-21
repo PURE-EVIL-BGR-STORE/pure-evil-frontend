@@ -1,26 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- 1. Color Palette (Bản Màu Chính) --- */
+  --background: #f9f9f8; /* Primary page background */
+  --surface: #ffffff; /* Cards, modals, overlays */
+  --surface-warm: #f2ece3; /* Warm accent sections */
+  --text-primary: #111111; /* Headings, body text */
+  --text-secondary: #666666; /* Captions, descriptions */
+  --text-tertiary: #8e8e8e; /* Labels, placeholders */
+  --accent: #c19a6b; /* CTAs, links, highlights */
+  --accent-hover: #b0895c; /* Hover state for accent */
+  --border: rgba(0, 0, 0, 0.25); /* Dividers, borders (25% opacity) */
+  --border-subtle: rgba(0, 0, 0, 0.1); /* Subtle hair lines */
+
+  /* --- 2. Spacing Scale (4px Grid) --- */
+  --spacing-xs: 4px; /* Icon gaps */
+  --spacing-sm: 8px; /* Tight element gaps */
+  --spacing-md: 16px; /* Component padding */
+  --spacing-lg: 24px; /* Card padding */
+  --spacing-xl: 32px; /* Section inner padding */
+  --spacing-2xl: 48px; /* Between groups */
+  --spacing-3xl: 64px; /* Page margins */
+  --spacing-4xl: 80px; /* Section spacing */
+  --spacing-5xl: 120px; /* Large section gaps */
+
+  /* --- 3. Border Radius --- */
+  --radius-sharp: 0px;
+  --radius-subtle: 3px; /* Subtle softness for cards & buttons */
+  --radius: 3px;
+
+  /* --- 4. Typography --- */
+  --font-inter:
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+
+  --font-geist:
+    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --font-anton: var(--font-anton), "Anton", impact, sans-serif;
+
+  /* --- 5. Brand Gradients --- */
+  --gradient-logo: linear-gradient(
+    90deg,
+    #6b7280 0%,
+    #374151 40%,
+    #1f2937 75%,
+    #4b5563 100%
+  );
+  --gradient-emerald: linear-gradient(
+    90deg,
+    #2d6a4f 0%,
+    #1b4332 40%,
+    #081c15 75%,
+    #2d4a3e 100%
+  );
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-foreground: var(--text-primary);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+
+  --spacing-xs: var(--spacing-xs);
+  --spacing-sm: var(--spacing-sm);
+  --spacing-md: var(--spacing-md);
+  --spacing-lg: var(--spacing-lg);
+  --spacing-xl: var(--spacing-xl);
+  --spacing-2xl: var(--spacing-2xl);
+  --spacing-3xl: var(--spacing-3xl);
+  --spacing-4xl: var(--spacing-4xl);
+  --spacing-5xl: var(--spacing-5xl);
+
+  --radius-subtle: var(--radius-subtle);
+  --radius-sharp: var(--radius-sharp);
+
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-geist);
+  --font-sans: var(--font-geist);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-geist);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Display: 64px · Inter Bold */
+.type-display {
+  font-family: var(--font-inter);
+  font-size: clamp(2.5rem, 5.5vw, 4rem); /* 40px to 64px */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+/* H1: 40px · Inter SemiBold */
+.type-h1 {
+  font-family: var(--font-inter);
+  font-size: clamp(2rem, 3.5vw, 2.5rem); /* 32px to 40px */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+/* H2: 32px · Inter SemiBold */
+.type-h2 {
+  font-family: var(--font-inter);
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* 24px to 32px */
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+/* H3: 24px · Inter Medium */
+.type-h3 {
+  font-family: var(--font-inter);
+  font-size: 1.5rem; /* 24px */
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* H4: 20px · Geist SemiBold */
+.type-h4 {
+  font-family: var(--font-geist);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Body Large: 18px · Geist Regular */
+.type-body-lg {
+  font-family: var(--font-geist);
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Body: 16px · Geist Regular */
+.type-body {
+  font-family: var(--font-geist);
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Body Small: 14px · Geist Regular */
+.type-body-sm {
+  font-family: var(--font-geist);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Caption: 13px · Geist Medium */
+.type-caption {
+  font-family: var(--font-geist);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Overline: 12px · Geist Medium (Uppercase, tracking) */
+.type-overline {
+  font-family: var(--font-geist);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Eyebrow Label with Accent Dot */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-geist);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Primary CTA Button (3px subtle radius, sharp & modern) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-primary);
+  color: #ffffff;
+  font-family: var(--font-geist);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: var(--radius-subtle);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: #222222;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Link Style CTA */
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-geist);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: var(--accent);
+}
+
+/* --- Sheet & Dialog Hardware-Accelerated Animations --- */
+@keyframes overlay-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-slide-in-left {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-out-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-in-right {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-out-right {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-in-top {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-out-top {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes sheet-slide-in-bottom {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sheet-slide-out-bottom {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.sheet-overlay {
+  will-change: opacity;
+}
+
+.sheet-overlay[data-state="open"] {
+  animation: overlay-fade-in 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-overlay[data-state="closed"] {
+  animation: overlay-fade-out 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-panel {
+  will-change: transform;
+}
+
+.sheet-side-left[data-state="open"] {
+  animation: sheet-slide-in-left 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-side-left[data-state="closed"] {
+  animation: sheet-slide-out-left 240ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.sheet-side-right[data-state="open"] {
+  animation: sheet-slide-in-right 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-side-right[data-state="closed"] {
+  animation: sheet-slide-out-right 240ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.sheet-side-top[data-state="open"] {
+  animation: sheet-slide-in-top 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-side-top[data-state="closed"] {
+  animation: sheet-slide-out-top 240ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.sheet-side-bottom[data-state="open"] {
+  animation: sheet-slide-in-bottom 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-side-bottom[data-state="closed"] {
+  animation: sheet-slide-out-bottom 240ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* --- Toast Notification Hardware-Accelerated Animations --- */
+@keyframes toast-slide-in-right {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-slide-out-right {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+.toast-item-enter {
+  animation: toast-slide-in-right 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.toast-item-exit {
+  animation: toast-slide-out-right 200ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes toast-progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+
+

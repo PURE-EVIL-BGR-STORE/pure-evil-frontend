@@ -1,0 +1,20 @@
+{
+  "Nav": {
+    "catalog": "Catalog",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cart": "Cart",
+    "search": "Search",
+    "login": "Login",
+    "register": "Register"
+  },
+  "Footer": {
+    "tagline": "Not everyone is meant to fit in. Some are born to stand apart.",
+    "company": "Company",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
