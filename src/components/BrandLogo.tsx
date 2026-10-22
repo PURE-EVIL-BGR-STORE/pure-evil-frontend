@@ -30,7 +30,7 @@ export function BrandLogo({
   const content = (
     <div
       className={cn(
-        "inline-flex items-center gap-2.5 select-none cursor-pointer shrink-0",
+        "inline-flex items-center gap-2.5 select-none cursor-pointer shrink-0 transition-opacity duration-200 hover:opacity-90",
         className,
       )}
     >

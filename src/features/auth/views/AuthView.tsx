@@ -56,7 +56,7 @@ export function AuthView({ initialMode = "login" }: AuthViewProps) {
           <div className="flex justify-center mb-6">
             <Link
               href={ROUTES.HOME}
-              className="inline-block select-none cursor-pointer hover:opacity-90 transition-opacity"
+              className="inline-block select-none cursor-pointer"
               aria-label="Pure Evil Store"
             >
               <Image
@@ -65,7 +65,7 @@ export function AuthView({ initialMode = "login" }: AuthViewProps) {
                 width={72}
                 height={72}
                 priority
-                className="w-auto h-16 sm:h-20 object-contain drop-shadow-sm"
+                className="w-auto h-16 sm:h-20 object-contain drop-shadow-xs transition-opacity duration-200 hover:opacity-90"
               />
             </Link>
           </div>

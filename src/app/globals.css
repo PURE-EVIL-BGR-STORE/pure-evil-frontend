@@ -40,7 +40,12 @@
 
   --font-anton: var(--font-anton), "Anton", impact, sans-serif;
 
-  /* --- 5. Brand Gradients --- */
+  /* --- 5. Logo Steel Metallic Palette --- */
+  --brand-steel: #2d3f52; /* Logo primary steel blue */
+  --brand-steel-dark: #182b3f; /* Logo deep metallic shadow */
+  --brand-steel-light: #7e8e9f; /* Logo brushed chrome highlight */
+
+  /* --- 6. Brand Gradients --- */
   --gradient-logo: linear-gradient(
     90deg,
     #6b7280 0%,
@@ -48,12 +53,12 @@
     #1f2937 75%,
     #4b5563 100%
   );
-  --gradient-emerald: linear-gradient(
-    90deg,
-    #2d6a4f 0%,
-    #1b4332 40%,
-    #081c15 75%,
-    #2d4a3e 100%
+  --gradient-steel: linear-gradient(
+    135deg,
+    #7e8e9f 0%,
+    #2d3f52 45%,
+    #182b3f 75%,
+    #42556a 100%
   );
 }
 
@@ -63,6 +68,10 @@
   --color-surface: var(--surface);
   --color-surface-warm: var(--surface-warm);
 
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-tertiary: var(--text-tertiary);
+
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
@@ -70,18 +79,15 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
 
+  --color-brand-steel: var(--brand-steel);
+  --color-brand-steel-dark: var(--brand-steel-dark);
+  --color-brand-steel-light: var(--brand-steel-light);
+  --color-steel: var(--brand-steel);
+  --color-steel-dark: var(--brand-steel-dark);
+  --color-steel-light: var(--brand-steel-light);
+
   --color-border: var(--border);
   --color-border-subtle: var(--border-subtle);
-
-  --spacing-xs: var(--spacing-xs);
-  --spacing-sm: var(--spacing-sm);
-  --spacing-md: var(--spacing-md);
-  --spacing-lg: var(--spacing-lg);
-  --spacing-xl: var(--spacing-xl);
-  --spacing-2xl: var(--spacing-2xl);
-  --spacing-3xl: var(--spacing-3xl);
-  --spacing-4xl: var(--spacing-4xl);
-  --spacing-5xl: var(--spacing-5xl);
 
   --radius-subtle: var(--radius-subtle);
   --radius-sharp: var(--radius-sharp);
@@ -427,5 +433,71 @@ body {
   }
 }
 
+/* --- Logo Intro Animations --- */
+@keyframes emblem-3d-reveal {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) scale(0.85) translateY(12px) rotateY(-18deg);
+    filter: blur(6px) brightness(1.2);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0px) brightness(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) scale(1) translateY(0px) rotateY(0deg);
+    filter: blur(0px) brightness(1);
+  }
+}
 
+@keyframes metallic-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(120%) skewX(-25deg);
+  }
+}
 
+@keyframes brand-welcome-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+    letter-spacing: 0.05em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    letter-spacing: 0.16em;
+  }
+}
+
+@keyframes intro-progress-line {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-emblem-3d {
+  animation: emblem-3d-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.animate-metallic-sweep {
+  animation: metallic-sweep 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform;
+}
+
+.animate-brand-welcome {
+  animation: brand-welcome-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  will-change: transform, opacity;
+}
+
+.animate-intro-progress {
+  animation: intro-progress-line 1.25s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  will-change: transform;
+}
