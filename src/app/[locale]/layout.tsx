@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { SiteNav } from "@/components/SiteNav";
+import { LogoIntro } from "@/components/LogoIntro";
 import { BRAND } from "@/shared/constants";
 import { ToastProvider } from "@/shared/ui";
 
@@ -28,6 +29,17 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND.NAME}`,
   },
   description: BRAND.TAGLINE,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/images/pure-evil-emblem.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -55,6 +67,7 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>
           <ToastProvider>
+            <LogoIntro />
             <SiteNav />
             <main className="flex-1">{children}</main>
           </ToastProvider>

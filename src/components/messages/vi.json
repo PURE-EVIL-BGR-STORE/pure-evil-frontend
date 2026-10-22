@@ -16,5 +16,61 @@
     "rights": "Bảo lưu mọi quyền.",
     "privacy": "Chính Sách Bảo Mật",
     "terms": "Điều Khoản Dịch Vụ"
+  },
+  "Home": {
+    "Hero": {
+      "dropBadge": "DROP 01 // UNFOLDING",
+      "headingLine1": "CHOOSE YOUR LIFE",
+      "headingLine2": "BY YOUR DESIGN",
+      "subtitle": "Keep grinding for your purpose instead of chasing fies, being a kind and a real one to become great.",
+      "exploreCatalog": "KHÁM PHÁ CATALOG",
+      "brandStory": "CÂU CHUYỆN THƯƠNG HIỆU"
+    },
+    "Bento": {
+      "eyebrow": "DANH MỤC TIÊU BIỂU",
+      "title": "Các Thiết Kế Mới Nhất",
+      "description": "Thời trang là cách chúng tôi bộc bạch chính mình, tỉ mỉ trong từng phom dáng để nâng niu chuyển động của bạn, và gửi gắm trọn vẹn cảm hứng để tìm thấy những tâm hồn đồng điệu.",
+      "card1Badge": "01 / PUMP COVERS",
+      "card1Title": "OVERSIZED PUMP COVER",
+      "card1Sub": "Form Boxy Trễ Vai • 320 GSM Heavyweight",
+      "card2Badge": "02 / LOWER WEAR",
+      "card2Title": "QUẦN CARGO & SWEATPANTS",
+      "card3Badge": "03 / OUTERWEAR",
+      "card3Title": "HOODIE & DISTRESSED ZIP-UP"
+    },
+    "Catalog": {
+      "eyebrow": "DROP ARCHIVE 001",
+      "title": "KỆ HÀNG TRỰC TUYẾN",
+      "subtitle": "Rê chuột vào sản phẩm để chọn nhanh kích cỡ phù hợp với bạn.",
+      "quickAdd": "THÊM NHANH VÀO GIỎ",
+      "sizeGuide": "Bảng size",
+      "toastSuccess": "Đã thêm vào giỏ hàng",
+      "categories": {
+        "all": "Tất cả Drop 01",
+        "tees": "Áo Thun & Pump Cover",
+        "hoodies": "Hoodie & Zip-Up",
+        "bottoms": "Quần Sweatpants & Shorts"
+      }
+    },
+    "Philosophy": {
+      "eyebrow": "TRIẾT LÝ CHẾ TÁC CỦA ĐỘI NGŨ",
+      "heading": "Vẻ ngoài đẹp mắt & Trải nghiệm của bạn là sự vinh hạnh của chúng tôi",
+      "story": "Từ một ý tưởng, chúng tôi thêu dệt nên những thứ điên rồ nhất có thể, đủ điên để đồng cảm, đủ hiểu để truyền đạt được thứ mà chúng tôi muốn. Sự lựa chọn trang phục là sự lựa chọn thể hiện bản thân, phong cách sống và giá trị cốt lõi của bạn.",
+      "cta": "TÌM HIỂU THÊM"
+    },
+    "SizeGuide": {
+      "eyebrow": "PURE EVIL ARCHIVE",
+      "title": "Bảng Kích Cỡ & Hướng Dẫn Fit",
+      "description": "Thiết kế theo form Boxy Oversized trễ vai đặc trưng, tạo độ rủ tự nhiên và thoải mái khi vận động thể thao hoặc diện phố.",
+      "colSize": "Size",
+      "colHeight": "Chiều cao (cm)",
+      "colWeight": "Cân nặng (kg)",
+      "colLength": "Dài áo (cm)",
+      "colChest": "Rộng ngực (cm)",
+      "noteTitle": "💡 Lưu ý khi chọn size",
+      "note1": "Form áo đã được tính toán độ thụng Boxy Oversized tiêu chuẩn. Nếu bạn thích mặc rộng thoải mái (Pump Cover), hãy chọn đúng size theo bảng trên.",
+      "note2": "Nếu bạn thích mặc gọn hoặc vừa vặn hơn, bạn có thể lùi 1 size.",
+      "note3": "PURE EVIL hỗ trợ đổi size tận nơi trong 14 ngày hoàn toàn miễn phí."
+    }
   }
 }

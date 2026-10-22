@@ -16,5 +16,61 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "Home": {
+    "Hero": {
+      "dropBadge": "DROP 01 // UNFOLDING",
+      "headingLine1": "CHOOSE YOUR LIFE",
+      "headingLine2": "BY YOUR DESIGN",
+      "subtitle": "Keep grinding for your purpose instead of chasing fies, being a kind and a real one to become great.",
+      "exploreCatalog": "EXPLORE CATALOG",
+      "brandStory": "BRAND STORY"
+    },
+    "Bento": {
+      "eyebrow": "PRIMARY CATALOG",
+      "title": "Latest Drops & Silhouettes",
+      "description": "Apparel is how we express our inner drive—engineered in every cut to honor your movements, forging a silent bond among like-minded rebels.",
+      "card1Badge": "01 / PUMP COVERS",
+      "card1Title": "OVERSIZED PUMP COVER",
+      "card1Sub": "Drop-Shoulder Boxy Fit • 320 GSM Heavyweight",
+      "card2Badge": "02 / LOWER WEAR",
+      "card2Title": "CARGO PANTS & SWEATPANTS",
+      "card3Badge": "03 / OUTERWEAR",
+      "card3Title": "HOODIE & DISTRESSED ZIP-UP"
+    },
+    "Catalog": {
+      "eyebrow": "DROP ARCHIVE 001",
+      "title": "ONLINE CATALOG",
+      "subtitle": "Hover over any piece to quickly select your preferred fit and size.",
+      "quickAdd": "QUICK ADD TO BAG",
+      "sizeGuide": "Size Guide",
+      "toastSuccess": "Added to bag",
+      "categories": {
+        "all": "All Drop 01",
+        "tees": "Tees & Pump Covers",
+        "hoodies": "Hoodies & Zip-Ups",
+        "bottoms": "Sweatpants & Shorts"
+      }
+    },
+    "Philosophy": {
+      "eyebrow": "CRAFTSMANSHIP PHILOSOPHY",
+      "heading": "Your presence and everyday confidence are our highest honor",
+      "story": "From raw instinct, we engineer pieces born of controlled insanity—rebellious enough to resonate, disciplined enough to wear anywhere. Your wardrobe is an uncompromised statement of your identity and lifestyle.",
+      "cta": "LEARN MORE"
+    },
+    "SizeGuide": {
+      "eyebrow": "PURE EVIL ARCHIVE",
+      "title": "Size Guide & Fit Recommendations",
+      "description": "Tailored in a signature drop-shoulder boxy oversized fit, delivering effortless drape and unrestricted movement in the gym and on the streets.",
+      "colSize": "Size",
+      "colHeight": "Height (cm)",
+      "colWeight": "Weight (kg)",
+      "colLength": "Length (cm)",
+      "colChest": "Chest (cm)",
+      "noteTitle": "💡 Sizing & Fit Notes",
+      "note1": "Garments feature an intentional boxy oversized drape. For the relaxed pump-cover silhouette, select your true size.",
+      "note2": "If you prefer a closer, tailored fit, consider sizing down one size.",
+      "note3": "PURE EVIL provides complimentary door-to-door size exchanges within 14 days."
+    }
   }
 }

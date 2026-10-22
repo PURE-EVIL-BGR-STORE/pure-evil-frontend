@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { ShoppingBag, Search, Menu, Globe, User } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { ROUTES } from "@/shared/constants";
 import { BrandLogo } from "./BrandLogo";
 import {
@@ -62,8 +61,8 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#F9F9F8]/95 backdrop-blur-md transition-colors border-b border-black/[0.04]">
       {/* 3-Column Navigation Bar with 80px horizontal padding on desktop */}
-      <div className="w-full px-4 sm:px-8 lg:px-[80px] h-16 sm:h-20 flex items-center justify-between gap-2">
-        {/* COLUMN 1 (LEFT): Brand Logo & Mobile Trigger */}
+      <div className="w-full px-4 sm:px-8 lg:px-[80px] h-16 sm:h-20 flex items-center justify-between gap-2 relative">
+        {/* COLUMN 1 (LEFT): Brand Logo (Desktop) & Mobile Drawer Trigger (Mobile) */}
         <div className="flex items-center gap-2 sm:gap-3 flex-1 justify-start min-w-0">
           {/* Mobile Hamburger Drawer Trigger */}
           <div className="lg:hidden shrink-0">
@@ -169,11 +168,21 @@ export function SiteNav() {
             </Sheet>
           </div>
 
-          {/* Main Logo: Emblem only on mobile, Full Text + Emblem on md+ */}
+          {/* Desktop Brand Logo: Visible on lg+ only */}
+          <div className="hidden lg:flex items-center">
+            <BrandLogo
+              hideTextOnMobile={false}
+              emblemSize={42}
+              textSize="text-[26px] lg:text-[30px]"
+            />
+          </div>
+        </div>
+
+        {/* MOBILE CENTERED LOGO: Fixed in the exact geometric center of mobile header */}
+        <div className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
           <BrandLogo
             hideTextOnMobile={true}
-            emblemSize={28}
-            textSize="text-[26px] lg:text-[30px]"
+            emblemSize={36}
           />
         </div>
 

@@ -17,12 +17,15 @@ export const DESIGN_TOKENS = {
     textTertiary: "#8E8E8E",
     accent: "#C19A6B",
     accentHover: "#B0895C",
+    steel: "#2D3F52",
+    steelDark: "#182B3F",
+    steelLight: "#7E8E9F",
     border: "rgba(0, 0, 0, 0.25)",
     borderSubtle: "rgba(0, 0, 0, 0.10)",
   },
   gradients: {
     logo: "linear-gradient(90deg, #6B7280 0%, #374151 40%, #1F2937 75%, #4B5563 100%)",
-    emerald: "linear-gradient(90deg, #2D6A4F 0%, #1B4332 40%, #081C15 75%, #2D4A3E 100%)",
+    steel: "linear-gradient(135deg, #7E8E9F 0%, #2D3F52 45%, #182B3F 75%, #42556A 100%)",
   },
   spacing: {
     xs: "4px",
